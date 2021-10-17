@@ -35,6 +35,10 @@ const configuration: Configuration = {
         exclude: /node_modules/,
       },
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.(jpe?g|png|gif|svg)$/,
         type: "asset/resource",
         generator: {
@@ -63,7 +67,7 @@ const configuration: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
-    //   favicon: "src/assets/images/kalkutin.dev.ico",
+      //   favicon: "src/assets/images/kalkutin.dev.ico",
     }),
     // new PrerenderSPAPlugin({
     //   staticDir: path.join(__dirname, "dist"),
