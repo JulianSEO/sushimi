@@ -8,11 +8,13 @@ import Header from "components/Header";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Header />
-      <div>App</div>
-    </ThemeProvider>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+        <div>App</div>
+      </ThemeProvider>
+    </React.Fragment>
   );
 };
 

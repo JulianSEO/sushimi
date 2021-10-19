@@ -67,7 +67,7 @@ const configuration: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
-      //   favicon: "src/assets/images/kalkutin.dev.ico",
+        favicon: "src/assets/images/favicon.png",
     }),
     // new PrerenderSPAPlugin({
     //   staticDir: path.join(__dirname, "dist"),
