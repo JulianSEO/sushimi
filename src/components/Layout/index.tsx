@@ -10,8 +10,7 @@ const Layout = (props: any) => {
   return (
     <React.Fragment>
       <Header />
-      <Container sx={{ paddingTop: "70px", height: "100%" }}>
-        <div>App</div>
+      <Container sx={{ paddingTop: "48px" }}>
         <div>
           <Grid container spacing={2}>
             {mock.items.map((item, index) => {

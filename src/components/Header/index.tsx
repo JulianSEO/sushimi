@@ -4,14 +4,15 @@ import { Box } from "@mui/system";
 import { ShoppingBasket } from "@mui/icons-material";
 
 import Logo from "components/Logo";
-import { StyledCart } from "./styles";
+import { StyledCart, StyledToolBar } from "./styles";
+import ProductMenu from "components/ProductMenu";
 
 const Header = () => {
   return (
     <React.Fragment>
-      <AppBar position="fixed">
+      <AppBar position="static">
         <Container>
-          <Toolbar>
+          <StyledToolBar>
             <Box>
               <a href="/">
                 <Logo />
@@ -30,9 +31,10 @@ const Header = () => {
                 </div>
               </StyledCart>
             </Box>
-          </Toolbar>
+          </StyledToolBar>
         </Container>
       </AppBar>
+      <ProductMenu />
     </React.Fragment>
   );
 };
