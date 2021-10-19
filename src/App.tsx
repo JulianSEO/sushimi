@@ -4,15 +4,14 @@ import { CssBaseline } from "@mui/material";
 
 import theme from "theme";
 
-import Header from "components/Header";
+import Layout from "components/Layout";
 
 const App = () => {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
-        <div>App</div>
+        <Layout />
       </ThemeProvider>
     </React.Fragment>
   );
