@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Badge, Container, Toolbar } from "@mui/material";
+import { AppBar, Badge, Container } from "@mui/material";
 import { Box } from "@mui/system";
 import { ShoppingBasket } from "@mui/icons-material";
 
@@ -32,9 +32,9 @@ const Header = () => {
               </StyledCart>
             </Box>
           </StyledToolBar>
+          <ProductMenu />
         </Container>
       </AppBar>
-      <ProductMenu />
     </React.Fragment>
   );
 };

@@ -5,7 +5,6 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   CardMedia,
   Divider,
   Typography,
@@ -15,29 +14,30 @@ const ProductCard = (props: any) => {
   return (
     <React.Fragment>
       <Card>
-        <CardHeader title={props.item.title} />
-        <Divider />
-        <CardMedia
-          sx={{ padding: "0 48px" }}
-          component="img"
-          src={props.item.url}
-          height="120"
-        />
-        <CardContent
-          sx={{ flexGrow: 1, flexDirection: "column", minHeight: "90px" }}
-        >
-          <Typography gutterBottom variant="body1" component="div">
-            {props.item.description}
-          </Typography>
-        </CardContent>
-        <Divider />
-        <CardActions>
-          {props.item.price} MDL
-          <Box sx={{ flexGrow: 1 }} />
-          <Button size="small" color="secondary">
-            В корзину
-          </Button>
-        </CardActions>
+        <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+          <CardMedia
+            component="img"
+            sx={{ maxHeight: 170 }}
+            src={props.item.url}
+          ></CardMedia>
+          <CardContent sx={{ flexGrow: 1 }}>
+            <Typography gutterBottom variant="h6" component="div">
+              {props.item.title}
+            </Typography>
+            <Typography gutterBottom variant="body2" component="div">
+              {props.item.description}
+            </Typography>
+          </CardContent>
+          <Divider />
+          <CardActions>
+            <span style={{ fontWeight: "bold" }}>{props.item.price}</span>
+            <span>mdl</span>
+            <Box sx={{ flexGrow: 1 }} />
+            <Button variant="outlined" size="small" color="secondary">
+              В корзину
+            </Button>
+          </CardActions>
+        </Box>
       </Card>
     </React.Fragment>
   );
