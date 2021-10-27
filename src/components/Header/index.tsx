@@ -1,18 +1,17 @@
 import React from "react";
-import { AppBar, Badge, Container } from "@mui/material";
-import { Box } from "@mui/system";
+import { AppBar, Badge, Container, Toolbar, Box } from "@mui/material";
 import { ShoppingBasket } from "@mui/icons-material";
 
 import Logo from "components/Logo";
-import { StyledCart, StyledToolBar } from "./styles";
-import ProductMenu from "components/ProductMenu";
+
+import { StyledCart } from "./styles";
 
 const Header = () => {
   return (
     <React.Fragment>
-      <AppBar position="static">
-        <Container>
-          <StyledToolBar>
+      <AppBar position="fixed" color="primary" elevation={10}>
+        <Container sx={{ padding: "12px 0px" }}>
+          <Toolbar disableGutters>
             <Box>
               <a href="/">
                 <Logo />
@@ -24,15 +23,13 @@ const Header = () => {
                 <Badge color="secondary" badgeContent={3}>
                   <ShoppingBasket sx={{ fontSize: "32px" }} />
                 </Badge>
-
                 <div className="text">
                   <div className="title">Корзина</div>
                   <div className="price">700 MDL</div>
                 </div>
               </StyledCart>
             </Box>
-          </StyledToolBar>
-          <ProductMenu />
+          </Toolbar>
         </Container>
       </AppBar>
     </React.Fragment>

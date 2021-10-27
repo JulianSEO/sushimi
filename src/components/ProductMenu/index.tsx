@@ -7,7 +7,8 @@ const ProductMenu = () => {
     <React.Fragment>
       <Container>
         <Tabs
-          variant="scrollable"
+          centered
+          variant="fullWidth"
           onChange={(_, value) => setValue(value)}
           value={value}
           indicatorColor="secondary"
