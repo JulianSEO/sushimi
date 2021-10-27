@@ -10,7 +10,7 @@ export const StyledHeroContainer = styled.div`
   justify-content: center;
   text-align: center;
   min-height: 34rem;
-  padding: 7.5rem 0;
+  padding: 7.5rem 0 5rem;
   position: relative;
   z-index: 1;
 
