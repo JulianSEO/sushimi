@@ -8,7 +8,7 @@ const Products = (props: any) => {
   return (
     <React.Fragment>
       <Container>
-        <Grid container spacing={4} marginTop={0}>
+        <Grid container spacing={4} marginTop={0} marginBottom={4}>
           {items &&
             items.map((item, index) => (
               <Grid xs={12} md={4} item key={index}>
