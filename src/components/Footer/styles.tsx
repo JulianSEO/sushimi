@@ -8,4 +8,9 @@ export const StyledFooter = styled.footer`
   background-position: center bottom;
   background-image: url(${FooterImage});
   padding: 8.75rem 0 8.25rem 0;
+
+  .copyright {
+    color: #7a7879;
+    text-align: center;
+  }
 `;
