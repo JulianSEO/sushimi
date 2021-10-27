@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Box, Container, Breadcrumbs, Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Typography, Box, Container, Breadcrumbs, Button } from "@mui/material";
 
 import { StyledHeroContainer } from "./styles";
 
@@ -10,11 +11,17 @@ const Subheader = () => {
         <Container>
           <Box sx={{ justifyContent: "center", display: "flex" }}>
             <Breadcrumbs sx={{ color: "#c7c8cc" }}>
-              <Link href="/" color="inherit">Главная</Link>
-              <Link href="/shop" color="inherit">Меню</Link>
+              <Button color="inherit" component={Link} to="/">
+                Главная
+              </Button>
+              <Button color="inherit" component={Link} to="/shop">
+                Меню
+              </Button>
             </Breadcrumbs>
           </Box>
-          <Typography variant="h1" color="#fff">Меню</Typography>
+          <Typography variant="h1" color="#fff">
+            Меню
+          </Typography>
         </Container>
       </StyledHeroContainer>
     </React.Fragment>

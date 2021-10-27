@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 
@@ -11,7 +12,16 @@ const App = () => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout />
+        <Router>
+          <Switch>
+            <Route path="/">
+              <Layout />
+            </Route>
+            <Route path="*">
+              <Layout />
+            </Route>
+          </Switch>
+        </Router>
       </ThemeProvider>
     </React.Fragment>
   );
