@@ -20,6 +20,7 @@ const configuration: Configuration = {
   devtool: isDevelopment ? "eval-cheap-module-source-map" : "source-map",
   devServer: {
     port: 8080,
+    historyApiFallback: true,
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -67,7 +68,7 @@ const configuration: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
-        favicon: "src/assets/images/favicon.png",
+      favicon: "src/assets/images/favicon.png",
     }),
     // new PrerenderSPAPlugin({
     //   staticDir: path.join(__dirname, "dist"),

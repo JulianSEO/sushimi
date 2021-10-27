@@ -4,8 +4,9 @@ import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 
 import theme from "theme";
-
 import Layout from "components/Layout";
+import HomePage from "pages/Home";
+import ShoppingPage from "pages/Shop";
 
 const App = () => {
   return (
@@ -13,14 +14,16 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
-          <Switch>
-            <Route path="/">
-              <Layout />
-            </Route>
-            <Route path="*">
-              <Layout />
-            </Route>
-          </Switch>
+          <Layout>
+            <Switch>
+              <Route path="/shop">
+                <ShoppingPage />
+              </Route>
+              <Route path="/">
+                <HomePage />
+              </Route>
+            </Switch>
+          </Layout>
         </Router>
       </ThemeProvider>
     </React.Fragment>
