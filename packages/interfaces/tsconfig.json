@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "baseUrl": "./src",
+    "outDir": "lib"
+  },
+  "exclude": ["lib", "**/*.spec.tsx"]
+}
