@@ -1,5 +1,1 @@
-export type User = {
-  name: string;
-  age: number;
-  isAlive: boolean;
-};
+export type { Item } from "./item.interface";
