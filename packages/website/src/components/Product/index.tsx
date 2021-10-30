@@ -1,10 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Typography, IconButton } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 
 import { StyledDescription, StyledPrice, StyledProduct } from "./styles";
+import { cartAddItem } from "store/actions/cart.actions";
 
 const Product = (props: any) => {
+  const dispatch = useDispatch();
   return (
     <React.Fragment>
       <StyledProduct>
@@ -27,7 +30,11 @@ const Product = (props: any) => {
         </StyledDescription>
         <StyledPrice>
           <div className="price">{props.item.price} MDL</div>
-          <IconButton className="basket" color="secondary">
+          <IconButton
+            onClick={() => dispatch(cartAddItem(""))}
+            className="basket"
+            color="secondary"
+          >
             <ShoppingCart />
           </IconButton>
         </StyledPrice>
