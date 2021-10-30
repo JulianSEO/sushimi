@@ -1,0 +1,58 @@
+{
+  "name": "@sushimi/website",
+  "version": "0.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "ncu": "npm-check-updates"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecalcutin/sushimi.git"
+  },
+  "keywords": [],
+  "author": "Evgheni Calcutin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecalcutin/sushimi/issues"
+  },
+  "homepage": "https://github.com/ecalcutin/sushimi#readme",
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/roboto": "^4.5.1",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/material": "^5.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@sushimi/interfaces": "^0.0.4",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/styled-components": "^5.1.15",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.3.1",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "npm-check-updates": "^11.8.5",
+    "style-loader": "^3.3.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
