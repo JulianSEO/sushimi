@@ -1,12 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { AppBar, Badge, Container, Toolbar, Box } from "@mui/material";
 import { ShoppingBasket } from "@mui/icons-material";
 
+import { RootState } from "interfaces";
 import Logo from "components/Logo";
-
 import { StyledCart } from "./styles";
 
 const Header = () => {
+  const itemsCount = useSelector(({ cart }: RootState) => cart.items.length);
   return (
     <React.Fragment>
       <AppBar position="fixed" color="primary" elevation={10}>
@@ -20,7 +22,7 @@ const Header = () => {
             <Box sx={{ flexGrow: 1 }} />
             <Box>
               <StyledCart>
-                <Badge color="secondary" badgeContent={3}>
+                <Badge color="secondary" badgeContent={itemsCount}>
                   <ShoppingBasket sx={{ fontSize: "32px" }} />
                 </Badge>
                 <div className="text">
