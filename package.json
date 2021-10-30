@@ -6,6 +6,7 @@
     "build": "lerna run build",
     "test": "lerna run test"
   },
+  "license": "ISC",
   "devDependencies": {
     "lerna": "^4.0.0"
   }
