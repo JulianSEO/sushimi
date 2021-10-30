@@ -1,1 +1,1 @@
-export type { Item } from "./item.interface";
+export type { Product } from "./product.interface";
