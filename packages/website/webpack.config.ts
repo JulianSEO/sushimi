@@ -61,6 +61,7 @@ const configuration: Configuration = {
       pages: path.resolve(__dirname, "src", "pages"),
       components: path.resolve(__dirname, "src", "components"),
       theme: path.resolve(__dirname, "src", "theme"),
+      store: path.resolve(__dirname, "src", "store"),
       assets: path.resolve(__dirname, "src", "assets"),
       config: path.resolve(__dirname, "src", "config"),
     },
