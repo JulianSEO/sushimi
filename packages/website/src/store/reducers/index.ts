@@ -1,3 +1,11 @@
-import rootReducer from "./rootReducer";
+import { combineReducers } from "@reduxjs/toolkit";
 
-export { rootReducer };
+import appReducer from "./app.reducer";
+import cartReducer from "./cart.reducer";
+
+export const rootReducer = combineReducers({
+  app: appReducer,
+  cart: cartReducer,
+});
+
+export default rootReducer;
