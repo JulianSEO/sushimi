@@ -1,5 +1,2 @@
-import * as cartActions from "./cart.actions";
-
-export default {
-  cart: cartActions,
-};
+export * from "./app.actions";
+export * from "./product.actions";
