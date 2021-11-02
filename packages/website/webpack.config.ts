@@ -32,7 +32,7 @@ const configuration: Configuration = {
     rules: [
       {
         test: /\.(j|t)sx?$/,
-        use: "babel-loader",
+        use: "ts-loader",
         exclude: /node_modules/,
       },
       {
@@ -62,6 +62,7 @@ const configuration: Configuration = {
       components: path.resolve(__dirname, "src", "components"),
       theme: path.resolve(__dirname, "src", "theme"),
       store: path.resolve(__dirname, "src", "store"),
+      services: path.resolve(__dirname, "src", "services"),
       assets: path.resolve(__dirname, "src", "assets"),
       config: path.resolve(__dirname, "src", "config"),
     },
