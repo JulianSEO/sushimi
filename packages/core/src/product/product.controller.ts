@@ -10,6 +10,6 @@ export class ProductController {
 
   @Get('/')
   async find(): Promise<Product[]> {
-    return [];
+    return await this.productService.find();
   }
 }
