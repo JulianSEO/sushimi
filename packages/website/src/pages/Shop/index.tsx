@@ -1,13 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-import mock from "config/mock";
+import { RootState } from "interfaces";
 
 import Products from "components/Products";
 
 const ShoppingPage = () => {
+  const products = useSelector((state: RootState) => state.products.items);
   return (
     <React.Fragment>
-      <Products items={mock.items} />
+      <Products items={products} />
     </React.Fragment>
   );
 };
