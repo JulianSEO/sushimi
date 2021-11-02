@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 import { createReducer } from "typesafe-actions";
 
-import { Product } from "@sushimi/interfaces";
-import { RootAction } from "interfaces";
+import { RootAction, Product } from "interfaces";
 
 import { readProducts } from "store/actions";
 

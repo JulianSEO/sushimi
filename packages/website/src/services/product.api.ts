@@ -1,5 +1,5 @@
 import qs from "query-string";
-import type { Product } from "@sushimi/interfaces";
+import { Product } from "@sushimi/interfaces";
 
 import { apiClient } from "config";
 
