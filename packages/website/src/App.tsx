@@ -23,9 +23,12 @@ const App = () => {
                 <Route path="/shop">
                   <ShoppingPage />
                 </Route>
-                <Route path="/">
-                  <HomePage />
+                <Route path="**">
+                  <ShoppingPage />
                 </Route>
+                {/* <Route path="/">
+                  <HomePage />
+                </Route> */}
               </Switch>
             </Layout>
           </Router>
