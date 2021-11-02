@@ -1,3 +1,6 @@
 import { combineEpics } from "redux-observable";
 
-export default combineEpics();
+import appEpics from "./app.epics";
+import productEpics from "./product.epics";
+
+export default combineEpics(...appEpics, ...productEpics);
