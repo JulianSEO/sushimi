@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { Typography, IconButton } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 
+import { addToCart } from "store/actions";
 import { StyledDescription, StyledPrice, StyledProduct } from "./styles";
-import { cartAddItem } from "store/actions/cart.actions";
 
 const Product = (props: any) => {
   const dispatch = useDispatch();
@@ -31,7 +31,9 @@ const Product = (props: any) => {
         <StyledPrice>
           <div className="price">{props.item.price} MDL</div>
           <IconButton
-            onClick={() => dispatch(cartAddItem(""))}
+            onClick={() =>
+              dispatch(addToCart({ _id: props.item.title, quantity: 1 }))
+            }
             className="basket"
             color="secondary"
           >
