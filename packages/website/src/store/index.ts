@@ -4,9 +4,10 @@ import { createEpicMiddleware } from "redux-observable";
 import { RootAction, RootState, Services } from "interfaces";
 import services from "services";
 
-import { rootEpic } from "./epics";
-import { rootReducer } from "./reducers";
 import { AppInit } from "./actions";
+
+import rootEpic from "./epics";
+import rootReducer from "./reducers";
 
 const epicMiddleware = createEpicMiddleware<
   RootAction,
@@ -16,7 +17,7 @@ const epicMiddleware = createEpicMiddleware<
 >({ dependencies: services });
 
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: rootReducer(),
   middleware: [epicMiddleware],
 });
 

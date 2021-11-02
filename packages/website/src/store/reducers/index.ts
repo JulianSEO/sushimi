@@ -1,9 +1,12 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
 import appReducers from "./app.reducers";
+import productReducers from "./product.reducers";
 
-export const rootReducer = combineReducers({
-  app: appReducers,
-});
+const rootReducer = () =>
+  combineReducers({
+    app: appReducers,
+    products: productReducers,
+  });
 
 export default rootReducer;

@@ -1,3 +1,3 @@
 import rootEpic from "./rootEpic";
 
-export { rootEpic };
+export default rootEpic;
