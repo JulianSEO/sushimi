@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "sourceMap": true,
+    // "strict": true,
+    // "forceConsistentCasingInFileNames": true,
+    // "resolveJsonModule": true,
+    // "isolatedModules": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src"
+  },
+  "exclude": ["**/*.spec.tsx"]
+}
