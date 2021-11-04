@@ -11,7 +11,7 @@ const App = () => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <DashboardLayout></DashboardLayout>
+        <DashboardLayout>Content</DashboardLayout>
       </ThemeProvider>
     </React.Fragment>
   );

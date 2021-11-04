@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, CssBaseline, Toolbar } from "@mui/material";
 
 import ApplicationBar from "components/ApplicationBar";
 import Sidebar from "components/Sidebar";
@@ -10,7 +10,10 @@ const DashboardLayout = (props: any) => {
       <Box sx={{ display: "flex" }}>
         <ApplicationBar />
         <Sidebar />
-        {props.children}
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <Toolbar />
+          {props.children}
+        </Box>
       </Box>
     </React.Fragment>
   );

@@ -8,10 +8,22 @@ import {
   ListItemText,
 } from "@mui/material";
 
+const SidebarWidth = 240;
+
 const Sidebar = () => {
   return (
     <React.Fragment>
-      <Drawer variant="permanent">
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: SidebarWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+            width: SidebarWidth,
+            boxSizing: "border-box",
+          },
+        }}
+      >
         <Toolbar />
         <Box>
           <List>
