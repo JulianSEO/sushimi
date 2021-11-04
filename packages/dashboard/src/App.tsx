@@ -4,13 +4,14 @@ import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 
 import theme from "theme";
+import { DashboardLayout } from "components/Layout";
 
 const App = () => {
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router></Router>
+        <DashboardLayout></DashboardLayout>
       </ThemeProvider>
     </React.Fragment>
   );
